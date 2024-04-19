@@ -1,6 +1,6 @@
+import {DataUsers} from '../Types/Api.type';
 
-
-const Card = ({item}) => {
+const Card = ({item}: DataUsers) => {
   return (
     <>
       <div>

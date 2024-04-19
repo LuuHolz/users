@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import Card from '../components/Card'
+import Card from '../components/Card';
+import { DataUsers } from '../Types/Api.type';
 
-const Home = ({users}) => {
+const Home = ({users, isLoading} : {users: DataUsers; isLoading: boolean}) => {
 
     const [newUser, setNewUser] = useState('');
 
-    const newDataUser = (e) =>{
+    const newDataUser = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
+        
+        setNewUser('');
     }
 
     return (

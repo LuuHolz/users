@@ -1,10 +1,14 @@
-import React from 'react'
 
-const Card = () => {
+
+const Card = ({item}) => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div>
+        <p>City: {item.city}</p>
+        <p>Email: {item.email}</p>
+        <p>Phone: {item.phone}</p>
+      </div>
+    </>
   )
 }
 

@@ -21,7 +21,10 @@ function App() {
 
   return (
     <>
-      <Home users={users} isLoading={isLoading}/>
+      <div className='principalContainer'>
+        <Home users={users} isLoading={isLoading} />
+
+      </div>
     </>
   )
 }

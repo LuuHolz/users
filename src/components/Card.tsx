@@ -1,15 +1,17 @@
 import {DataUsers} from '../Types/Api.type';
 
-const Card = ({item}: DataUsers) => {
+const Card = ({ user }: { user?: DataUsers }) => {
+  if (!user) {
+    return null; 
+  }
+
   return (
-    <>
-      <div>
-        <p>City: {item.city}</p>
-        <p>Email: {item.email}</p>
-        <p>Phone: {item.phone}</p>
-      </div>
-    </>
-  )
+    <div>
+      <p>City: {user.address.city}</p>
+      <p>Email: {user.email}</p>
+      <p>Phone: {user.phone}</p>
+    </div>
+  );
 }
 
 export default Card
